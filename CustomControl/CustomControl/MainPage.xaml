@@ -7,10 +7,15 @@
              mc:Ignorable="d"
              x:Class="CustomControl.MainPage">
 
-    <StackLayout>
-        <local:FlipDigit x:Name="Flip"
-                         Margin="40,40,40,40"/>
-     
+    <StackLayout Orientation="Horizontal"  HeightRequest="50" Margin="20,20,20,20">
+        <local:FlipDigit x:Name="FlipIzquierdaHora" HeightRequest="40" WidthRequest="40"/>
+        <local:FlipDigit x:Name="FlipDerechaHora" HeightRequest="40" WidthRequest="40"/>
+        
+        <local:FlipDigit x:Name="FlipIzquierdaMinuto" HeightRequest="40" WidthRequest="40"/>
+        <local:FlipDigit x:Name="FlipDerechaMinuto" HeightRequest="40" WidthRequest="40"/>
+
+        <local:FlipDigit x:Name="FlipIzquierda" HeightRequest="40" WidthRequest="40"/>
+        <local:FlipDigit x:Name="FlipDerecha" HeightRequest="40" WidthRequest="40"/>
     </StackLayout>
 
 </ContentPage>

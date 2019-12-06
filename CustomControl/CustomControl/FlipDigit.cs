@@ -20,9 +20,12 @@ namespace CustomControl
 
             Grid.SetRow(up, 0);
             Grid.SetRow(down, 1);
+            Grid.SetRowSpan(up, 20);
+            Grid.SetRowSpan(down, 20);
 
             grid.Children.Add(up);
             grid.Children.Add(down);
+            
             up.Source = ImageSource.FromFile("up_0");
             down.Source = ImageSource.FromFile("down_0");
             Content = grid;
@@ -47,8 +50,6 @@ namespace CustomControl
 
             }
         }
-
-       
 
         public string Text {
             get { return (string) GetValue(TextProperty); }

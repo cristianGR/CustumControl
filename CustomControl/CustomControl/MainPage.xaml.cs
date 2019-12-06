@@ -13,6 +13,7 @@ namespace CustomControl
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+
         public MainPage()
         {
             InitializeComponent();
@@ -21,13 +22,28 @@ namespace CustomControl
 
         bool FlipRefresh()
         {
-            Flip.Text = DigitoDerecha(DateTime.Now.Second);
+            FlipDerecha.Text = DigitoDerecha(DateTime.Now.Second);
+            FlipDerechaMinuto.Text = DigitoDerecha(DateTime.Now.Minute);
+            FlipDerechaHora.Text = DigitoDerecha(DateTime.Now.Hour);
+
+            FlipIzquierda.Text = DigitoIzquierda(DateTime.Now.Second);
+            FlipIzquierdaMinuto.Text = DigitoIzquierda(DateTime.Now.Minute);
+            FlipIzquierdaHora.Text = DigitoIzquierda(DateTime.Now.Hour);
+
             return true;
         }
-        string DigitoDerecha(int segundos)
+
+        //////////////////
+      
+        string DigitoDerecha(int nros)
         {
-            string seg = segundos.ToString("00");
-            return seg.First().ToString();
+            string digitos = nros.ToString("00");
+            return digitos.Last().ToString();
+        }
+        string DigitoIzquierda(int nros)
+        {
+            string digitos = nros.ToString("00");
+            return digitos.First().ToString();
         }
     }
 }
