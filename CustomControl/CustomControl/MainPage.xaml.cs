@@ -22,11 +22,11 @@ namespace CustomControl
 
         bool FlipRefresh()
         {
-            FlipDerecha.Text = DigitoDerecha(DateTime.Now.Second);
+            FlipDerechaSegundo.Text = DigitoDerecha(DateTime.Now.Second);
             FlipDerechaMinuto.Text = DigitoDerecha(DateTime.Now.Minute);
             FlipDerechaHora.Text = DigitoDerecha(DateTime.Now.Hour);
 
-            FlipIzquierda.Text = DigitoIzquierda(DateTime.Now.Second);
+            FlipIzquierdaSegundo.Text = DigitoIzquierda(DateTime.Now.Second);
             FlipIzquierdaMinuto.Text = DigitoIzquierda(DateTime.Now.Minute);
             FlipIzquierdaHora.Text = DigitoIzquierda(DateTime.Now.Hour);
 
